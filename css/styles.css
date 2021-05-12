@@ -2,10 +2,45 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
 }
 html {
   font-family: 'Noto Sans JP', sans-serif;
   scroll-behavior: smooth;
   font-size: 18px;
+  color: white;
+  background: #4682A0;
+}
+main {
+  margin: auto;
+}
+/* Styling the HEADER */
+header {
+  background: linear-gradient(to right, #4682A0, white);
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding: 1px;
+  border-radius: 1px;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4682A0;
+  padding: 5px;
+}
+li {
+  margin: 5px;
+  border: 1px solid #4682A0;
+  background: rgba(300,300,300,0.8);
+  padding: 1px;
+}
+a:hover {
+  background-color: #4682A0;
+  color: white;
 }
