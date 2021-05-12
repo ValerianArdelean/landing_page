@@ -1,23 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+/* General style ruleset for page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
   box-sizing: border-box;
-  padding: 0;
 }
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
-  font-size: 18px;
+  font-size: 23px;
   color: white;
   background: #4682A0;
 }
-main {
-  margin: auto;
-}
+
+/* Creating the GRID */
+
+
 /* Styling the HEADER */
+
 header {
+  position: sticky;
+  top: 0;
   background: linear-gradient(to right, #4682A0, white);
-  margin-top: 30px;
-  margin-bottom: 100px;
   padding: 1px;
   border-radius: 1px;
 }
@@ -36,11 +38,29 @@ a {
 }
 li {
   margin: 5px;
-  border: 1px solid #4682A0;
   background: rgba(300,300,300,0.8);
   padding: 1px;
 }
 a:hover {
   background-color: #4682A0;
   color: white;
+}
+
+/* Styling the MAIN sections */
+body {
+  width: 90%;
+  margin: auto;
+}
+ section,
+ h1 {
+   height: 85vh;
+   margin: 0;
+ }
+h1 {
+  text-align: center;
+  padding-top: 30vh;
+  font-size: 2.5em;
+}
+.right {
+  text-align: right;
 }
