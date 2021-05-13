@@ -5,22 +5,16 @@
 }
 html {
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
   font-size: 23px;
   color: white;
   background: #4682A0;
 }
 
-/* Creating the GRID */
-
-
 /* Styling the HEADER */
-
 header {
   position: sticky;
   top: 0;
-  background: linear-gradient(to right, #4682A0, white);
-  padding: 1px;
+  padding-top: 0.10px;
   border-radius: 1px;
 }
 ul {
@@ -45,6 +39,10 @@ a:hover {
   background-color: #4682A0;
   color: white;
 }
+.activeLi {
+  background-color: red;
+  background: red;
+}
 
 /* Styling the MAIN sections */
 body {
@@ -53,7 +51,8 @@ body {
 }
  section,
  h1 {
-   height: 85vh;
+   padding-top: 18vh;
+   height: 80vh;
    margin: 0;
  }
 h1 {
@@ -63,4 +62,11 @@ h1 {
 }
 .right {
   text-align: right;
+}
+.active_section {
+  background: radial-gradient(#B1A2B0, #4682A0);
+}
+/* Styling the FOOTER */
+footer {
+  padding-top: 18vh;
 }
