@@ -1,6 +1,11 @@
-//CREATING THE NAVIGATION/LINK BUTTONS/MENU
+//Define Global Variables
+const sections = document.querySelectorAll('section');
+let ul = document.querySelector('ul');
+let nav = document.querySelector('#nav');
 let fragment = document.createDocumentFragment();
-  //creating separate home button
+
+//CREATING THE NAVIGATION/LINK BUTTONS/MENU
+//creating a separate HOME button as this is need it no matter how many sec. are
 let home = document.createElement('li');
 home.setAttribute('id', '#link');
 let an = document.createElement('a');
@@ -8,10 +13,8 @@ an.setAttribute('href','#section0');
 an.innerHTML = 'TOP';
 home.appendChild(an);
 fragment.appendChild(home);
-//now the others buttons based on number of sections
-let ul = document.querySelector('ul');
+//now creating the others NAV buttons based on number of sections
 let i = 1;
-const sections = document.querySelectorAll('section');
 for (section of sections) {
   let a = document.createElement('a');
   a.setAttribute('href', `#section${i}`);
@@ -28,13 +31,11 @@ for (section of sections) {
   }
   i += 1;
 }
-let nav = document.querySelector('#nav');
 nav.appendChild(fragment);
-// Scroll to section on link click and making the curent section visible
+// Scroll to anchor ID using scrollTO event
 nav.addEventListener('click', function(e) {
   e.preventDefault();
   let link = `${e.target.hash}`;
-  console.log(link)
   let s = document.querySelector(link.toLowerCase());
   s.scrollIntoView({behavior: 'smooth'});
 });
@@ -52,7 +53,7 @@ window.addEventListener('scroll', function(y) {
   for (s of sections) {
     const sectionTop = s.offsetTop;
     const sectionHeight = s.clientHeight;
-    if (pageYOffset > (sectionTop-400)) {
+    if (pageYOffset > (sectionTop-350)) {
       current = s.getAttribute('id');
     }
   }
@@ -60,6 +61,6 @@ window.addEventListener('scroll', function(y) {
   const navli = '#link'+String(current).slice(-1);
   //get the link button whom section is in view
   let na = document.getElementById(String(navli));
-  // formating the link
+  // Add class 'active' to section when near top of viewport
   na.setAttribute('class', 'activeLi');
 })
